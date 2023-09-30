@@ -1,0 +1,255 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+}
+
+.universe{
+    min-width: 100vw;
+    min-height: 100vh;
+    /* background-color: rgb(0, 0, 0); */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -8;
+    transform-style: preserve-3d;
+    perspective: 2500px;
+    
+
+}
+
+.sun{
+    width: 30px;
+    height: 30px;
+    background: radial-gradient( white 5%, yellow 15%, orange 40%, red 70% , orangered 100%);
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 68, 0, 0.253),
+    0 0 10px rgba(255, 255, 0, 0.416),
+    0 0 20px rgba(255, 68, 0, 0.39),
+    0 0 20px rgba(255, 0, 0, 0.381),
+    0 0 80px rgba(255, 0, 0, 0.338),
+    0 0 100px rgba(243, 97, 29, 0.317),
+    0 0 56px 20px orangered
+    
+    ;
+    /* rotate: x 40deg; */
+    border: 1px solid yellow;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: solar 200s linear infinite;
+}
+@keyframes solar{
+    from{
+        transform: rotateZ(0deg)
+    }
+    to{
+        transform: rotateZ(360deg);
+
+    }
+}
+.mercury-path{
+    position: absolute;
+    width: 41px;
+    height: 41px;
+    border: 1px solid skyblue;
+    border-radius: 50%;
+    z-index: -1;
+}
+.mercury{
+    position: absolute;
+    top: -5px;
+    left: -3px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(171, 171, 171, 0.989);
+    box-shadow: -1px -1px 2px white inset;
+}
+
+.venus-path{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border: 1px solid skyblue;
+    border-radius: 50%;
+    z-index: -1;
+}
+.venus{
+    position: absolute;
+    top: -21px;
+    right: -21px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: rgb(220, 186, 99);
+    box-shadow: 1px -2px 4px rgb(252, 241, 205) inset;
+}
+
+.earth-path{
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border: 1px solid skyblue;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.earth{
+    position: absolute;
+    top: -8px;
+    right: -52px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: blue;
+    /* background: linear-gradient(to right, white 5%, blue 10%, green 20%, blue 25%, blue 50%, green 60%, blue 80%, rgb(78, 77, 77)); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: earth 20s linear infinite;
+}
+@keyframes earth {
+    from{
+        rotate: 0deg;
+    }
+    to{
+        rotate: 360deg;
+    }
+}
+.moon-path{
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    border: 1px solid skyblue;
+    border-radius: 50%;
+    z-index: -1;
+
+}
+.moon{
+    position: absolute;
+    top: 0px;
+    right: -1px;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: white;
+}
+
+.mars-path{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border: 1px solid skyblue;
+    border-radius: 50%;
+    z-index: -1;
+}
+.mars{
+    position: absolute;
+    bottom: -50px;
+    left: -74px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: linear-gradient(to right, rgb(90, 0, 0) , orangered);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.jupiter-path{
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    border: 1px solid skyblue;
+    border-radius: 50%;
+    z-index: -1;
+}
+.jupiter{
+    position: absolute;
+    top: -110px;
+    right: -171px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: radial-gradient(at 70% 25%, gray , skyblue, white, skyblue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.saturn-path{
+    position: absolute;
+    width: 670px;
+    height: 670px;
+    border: 1px solid skyblue;
+    border-radius: 50%;
+    z-index: -1;
+}
+.saturn{
+    position: absolute;
+    bottom: -171px;
+    right: -280px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: radial-gradient(at 85% 55%, gray, rgb(231, 208, 154), gray, blue);
+   box-shadow: 0 0 40px white, 0 0 20px 10px white;
+}
+.uranus-path{
+    position: absolute;
+    width: 1170px;
+    height: 1170px;
+    border: 1px solid skyblue;
+    border-radius: 50%;
+    z-index: -1;
+}
+.uranus{
+    position: absolute;
+    top: -497px;
+    right: -300px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: gray;
+    box-shadow: 0 0 40px white, 0 0 20px 10px white;
+
+}
+.neptune-path{
+    position: absolute;
+    width: 1570px;
+    height: 1570px;
+    border: 1px solid skyblue;
+    border-radius: 50%;
+    z-index: -1;
+   
+}
+.neptune{
+    position: absolute;
+    bottom: -80px;
+    right: -776px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: gray;
+   box-shadow: 0 0 40px white, 0 0 20px 10px white;
+
+}
+@media screen and (max-width: 600px){
+    .sun{
+        box-shadow: 0 0 10px rgba(255, 68, 0, 0.253),
+    0 0 10px rgba(255, 255, 0, 0.416),
+    0 0 20px rgba(255, 68, 0, 0.39),
+    0 0 20px rgba(255, 0, 0, 0.381),
+    0 0 80px rgba(255, 0, 0, 0.338),
+    0 0 100px rgba(243, 97, 29, 0.317)
+    ;
+        
+    }
+
+}
